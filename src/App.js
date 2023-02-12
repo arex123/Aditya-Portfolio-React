@@ -5,6 +5,7 @@ import Landing from './Pages/Landing'
 import Project from './Pages/Projects';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
+import ProjectDetail from './Pages/ProjectDetail';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Landing/>}/>
           <Route path='/experience' element={<Experience/>} />
           <Route path='/projects' element={<Project/>} />
+          <Route path='/project/:id' element={<ProjectDetail/>} />
         </Routes>
           <Footer/>
       </BrowserRouter>

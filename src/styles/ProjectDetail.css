@@ -1,0 +1,11 @@
+.projectDetail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectDetail img{
+  max-width: 100%;
+  height: auto;
+}
