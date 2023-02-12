@@ -10,11 +10,11 @@ const ProjectDetail = () =>{
     return (
         <div className="projectDetail">
             <h1>{project.name}</h1>
-            <img src={project.image}/>
+            <img src={project.image} onClick={()=>{ if(project.project_link!="")window.open(project.project_link) }}/>
             <p>
                 <b>Skills:</b>{project.skills}
             </p>
-            <GitHub/>
+            <GitHub sx={{ fontSize:50 ,"&:hover": { color: "green"} }} onClick={()=>{window.open(project.github_link)}}/>
         </div>
     )
 }
