@@ -24,7 +24,7 @@ function Navbar(){
                 <Link to="/">Home</Link>
                 <Link to="/projects">Projects</Link>
                 <Link to="/experience">Experience</Link>
-                <Link to="https://drive.google.com/file/d/1j2yxR3GVuXRJrM3uMc8MpIah39PN923z/view?usp=share_link">Resume</Link>
+                <Link to="https://drive.google.com/file/d/1E8s0l2J44NVFXpImNclk2gdugsyCTtqT/view?usp=share_link">Resume</Link>
             </div>
         </div>
     )

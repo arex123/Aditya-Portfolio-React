@@ -45,12 +45,33 @@ const Experience = ()=>{
 
              {/* Forth Item */}
              <VerticalTimelineElement className="vertical-timeline-element--work"
-          date="2022 - present"
+          date="May 2022 - March 2023"
           iconStyle={{ background: "#3e497a", color: "#fff" }}
           icon={<Work />}>
                 <h3 className="vertical-timeline-element-title">Traqiq Solutions</h3>
                 <h4 className="vertical-timeline-element-subtitle">Noida</h4>
-                <p>Working on a Nodejs based project, which is a backend for a Taxi booking application (Slide).</p>
+                <div className="workrole">
+                <li>Worked on a <b>Nodejs</b> based project, which is a backend for a <b>Taxi booking application (Slide)</b>.</li>
+                <li>created api's for <b>app</b>, <b>admin web portal</b> section</li>
+                <li>Learned <b>Agile Methodology</b>, worked on <b>JIRA</b></li>
+                <li>Learned Deployement of Web Application to <b>AWS</b></li>
+                <li>In starting month learned java, <b>spring boot</b> and modified some <b>api</b>, which were based on spring boot for <b>Bike-Rental-App</b></li>
+                </div>
+                
+             </VerticalTimelineElement>
+
+             {/* Fifth Item */}
+             <VerticalTimelineElement className="vertical-timeline-element--work"
+          date="March 2023 - Present"
+          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          icon={<Work />}>
+                <h3 className="vertical-timeline-element-title">Valiant Communication Ltd</h3>
+                <h4 className="vertical-timeline-element-subtitle">New Delhi</h4>
+                <div className="workrole">
+                <li>Working on a <b>MERN</b> Stack Application,</li>
+                <li>Created An MERN Application from scrath, Integrated This app with<b> Router Device(Digital Device)</b>, for handling/manipulating Router Inbuild Data,</li>
+                <li><b>Design Database structure</b> of Their Router Device</li>
+                </div>
              </VerticalTimelineElement>
 
 

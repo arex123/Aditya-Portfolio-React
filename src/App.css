@@ -15,3 +15,12 @@
 svg{
   cursor: pointer;
 }
+
+.workrole{
+  margin-top: 10px;
+}
+
+.workrole li{
+  margin-top: 5px;
+}
+
