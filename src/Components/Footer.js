@@ -8,7 +8,7 @@ function Footer(){
     }
     return (
         <div className="footer">
-            <div className="socialMedia">
+            <div className="socialMedia" >
                 <LinkedIn onClick={handleClick}/>
             </div>
             <p>&copy; {new Date().getFullYear()} ad47kumar@gmail.com</p>

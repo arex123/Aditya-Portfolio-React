@@ -8,13 +8,13 @@ const ProjectDetail = () =>{
     const project = ProjectList[id]
 
     return (
-        <div className="projectDetail">
+        <div className="projectDetail" style={{marginBottom:'40px'}}>
             <h1>{project.name}</h1>
             <img src={project.image} onClick={()=>{ if(project.project_link!="")window.open(project.project_link) }}/>
             <p>
                 <b>Skills:</b>{project.skills}
             </p>
-            <GitHub sx={{ fontSize:50 ,"&:hover": { color: "green"} }} onClick={()=>{window.open(project.github_link)}}/>
+            <GitHub sx={{ color:'white',fontSize:50 ,"&:hover": { color: "#986dff"} }} onClick={()=>{window.open(project.github_link)}}/>
         </div>
     )
 }

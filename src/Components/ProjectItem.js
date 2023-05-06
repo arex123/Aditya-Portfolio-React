@@ -8,7 +8,7 @@ const ProjectItem=({image,name,id})=>{
             navigate('/project/'+id)
         }}>
             <div style={{backgroundImage:`url(${image})`}} className="bgImage" ></div>
-            <h1>{name}</h1>
+            <h1 style={{color:"white"}}>{name}</h1>
         </div>
     )
 } 

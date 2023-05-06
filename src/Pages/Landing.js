@@ -12,7 +12,7 @@ const Landing = ()=>{
 
     return <div className="home">
         <div className="about">
-            <h2>Hi, I am Aditya</h2>
+            <h2>Hi, I am <span style={{color:'#986dff'}}> Aditya</span></h2>
             <div className="prompt">
             <p>A software developer with a passion for learning and creating.</p>
                 <LinkedIn style={{ "&:hover": { color: "green"} }} onClick={()=>openLink(0)}/>
