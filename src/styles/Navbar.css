@@ -1,25 +1,66 @@
 .navbar {
     width: 100%;
-    height: 100px;
-    background: #111111;
+    height: 6rem;
+    background: rgb(35,41,70);
+    padding-right: 10px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    transition: all .2s;
+    
   }
   
+  .Ad_title{
+    color: white;
+    font-size: 70px;
+    z-index: 1000;
+    cursor: pointer;
+    transform: rotate(-8deg);
+
+    transition: all .2s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+  }
+  .Ad_title span{
+    display: inline-block;
+    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .2s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+  }
+
+  .Ad_title:hover {
+    transform: scale(.8) rotate(-8deg);
+  }
+
   .links {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     color: white;
   }
   
   .navbar a {
+    position: relative;
     color: white;
     text-decoration: none;
-    margin: 20px;
-    font-size: 25px;
+    margin-right: 22px;
+    font-size: 18px;
+    font-family: 'Spectral', serif;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
   }
   
+  .navbar a:hover{
+    transform: translateY(-5px);
+    color: rgba(184,193,236,1);
+
+  }
+
   .toggleButton {
     width: 100%;
     height: 100px;
@@ -85,4 +126,28 @@
     #open .links {
       flex-direction: row;
     }
+  }
+
+  .underline_image{
+    position: absolute;
+    top: 48px;
+    left: -5px;
+    transition: all .2s;
+    display: none;
+  }
+
+  .underline_image_home{
+    display: block;
+  }
+  .underline_image_project{
+    left: 2px;
+  }
+  
+  .underline_image_experience{
+    transform: scale(1.4);
+    left: 15px;
+  }
+
+  .underline_image_resume{
+    left: 2px;
   }
