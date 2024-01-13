@@ -1,54 +1,141 @@
-import { GitHub, LinkedIn } from "@mui/icons-material";
-import React from "react";
+import React, { Suspense } from "react";
 import '../styles/Home.css'
+// import { Canvas } from "@react-three/fiber";
+// import { OrbitControls} from "@react-three/drei";
+// import Dragon from '../assets/Dragon'
+import Earth from '../Earth'
+import { ReactComponent as Traingle } from '../assets/vectors/triangle.svg'
+import { ReactComponent as Elipse } from '../assets/vectors/ellipse.svg'
+import Exp from '../assets/skills/express.svg'
+import Mong from '../assets/skills/mongodb.svg'
+import Fig from '../assets/skills/figma.svg'
+import GitSvg from '../assets/skills/git.svg'
+import HtmlSvg from '../assets/skills/html.svg'
+import ReactSvg from '../assets/skills/react.svg'
+import NodeSvg from '../assets/skills/node.svg'
+import JSSvg from '../assets/skills/js.svg'
+import Cards from "../Components/Cards";
+import CylinderSvg from '../assets/vectors/cylinder.svg'
+import LShapeSvg from '../assets/vectors/l-vector.svg'
+import SpinSvg from '../assets/vectors/circle-spin.svg'
+import BoxedSvg from '../assets/vectors/boxes.svg'
+import ConnectSvg from '../assets/vectors/contact.svg'
+const Landing = () => {
 
-const Landing = ()=>{
+    let links = ["https://www.linkedin.com/in/adityaprofile1/", "https://github.com/arex123"]
 
-    let links = ["https://www.linkedin.com/in/adityaprofile1/","https://github.com/arex123"]
-
-    function openLink(idx){
+    function openLink(idx) {
         window.open(links[idx])
     }
 
+
+
     return <div className="home">
-        <div className="about">
-            <h2>Hi, I am <span style={{color:'#986dff'}}> Aditya</span></h2>
-            <div className="prompt">
-            <p>A software developer with a passion for learning and creating.</p>
-                <LinkedIn style={{ "&:hover": { color: "green"} }} onClick={()=>openLink(0)}/>
-                <GitHub style={{ "&:hover": { color: "green"} }} onClick={()=>openLink(1)}/>
-                {/* <Email onClick={openLink(2)}/> */}
+        <div className="screen_1">
+            <div className="about">
+                <div className="about_q1"><p></p> <p className="q1">Who am i?</p></div>
+                <h2>I am Aditya
+                    <div>
+                        <Traingle className="traingle_svg" />
+                    </div>
+                </h2>
+                <div className="prompt">
+                    <p>A software developer with a passion for learning and creating Softwares.</p>
+                    {/* <LinkedIn style={{ "&:hover": { color: "green"} }} onClick={()=>openLink(0)}/>
+                    <GitHub style={{ "&:hover": { color: "green"} }} onClick={()=>openLink(1)}/> */}
+                    {/* <Email onClick={openLink(2)}/> */}
+
+                </div>
+                <div className="btn-km-res">
+                    <div className="btn-km">Know More</div>
+                    <div className="btn-res">Download Resume</div>
+                </div>
+            </div>
+            <div className="about_right">
+                <Elipse className="about_right_svg" />
+            </div>
+            {/* <div className="dragon_cont">
+                    <Canvas>
+                        <ambientLight/>
+                        <OrbitControls/>
+                        <Suspense fallback={null}>
+                             <Earth/> 
+                        </Suspense>
+                    </Canvas>
+            </div> */}
+        </div>
+
+        <div className="screen_2">
+            <div className="skills_info">
+                <div className="about_q1"><p></p> <p className="q1">What i Know?</p></div>
+
+                <p className="skills_des">He creates elegant, logical web and mobile app solutions. In his hobby time, he designs.</p>
+                <p className="skills_code">Think.<span> Code.</span> Debug.</p>
+                <div className="l_shape_svg">
+                    <img src={LShapeSvg} />
+                </div>
+            </div>
+            <div className="skills_icons">
+                <div className="cylinder_svg">
+                    <img src={CylinderSvg} />
+                </div>
+
+                <div className="skills_icons_cont">
+                    <div>  <img className="skill_svgs svg_node" src={NodeSvg} /></div>
+                    <div>  <img className="skill_svgs svg_react" src={ReactSvg} /></div>
+                    <div>  <img className="skill_svgs svg_html" src={HtmlSvg} /></div>
+                    <div>  <img className="skill_svgs svg_js" src={JSSvg} /></div>
+                    <div>  <img className="skill_svgs svg_exp" src={Exp} /></div>
+                    <div>  <img className="skill_svgs svg_git" src={GitSvg} /></div>
+                    <div>  <img className="skill_svgs svg_mong" src={Mong} /></div>
+                    <div>  <img className="skill_svgs svg_fig" src={Fig} /></div>
+                </div>
+
+
             </div>
         </div>
-        <div className="skills">
-            <h1>skills</h1>
-            <ol className="list">
-                <li className="item">
-                    <h2>Front-End</h2>
-                    <span>
-                        Html, Css, Javascript, Reactjs, Material UI, Bootstrap
-                    </span>
-                </li>
-                <li className="item">
-                    <h2>Back-End</h2>
-                    <span>
-                        Nodejs, ExpressJS, Mongodb
-                    </span>
-                    
-                </li>
-                <li className="item">
-                    <h2>Languages</h2>
-                    <span>
-                        Javascript, Java, Go
-                    </span>
-                    
-                </li>
 
-            </ol>
+
+        <div className="experice_section1">
+            <div className="skills_info connect_section">
+                <div className="about_q1"><p></p> <p className="q1">#2 What does he do? </p></div>
+
+                <p className="skills_des">Currently Learning More Tech. Previously worked as a </p>
+                <p className="skills_code"><span>Software Developer</span></p>
+            </div>
 
         </div>
 
-        
+        <div className="about_project">
+            <div className="skills_info">
+                <div className="about_q1"><p></p> <p className="q1">What i have built?</p></div>
+
+                <p className="skills_des">Some awesome products for the awesome poeple.</p>
+                <p className="skills_code">Something he has <span> built.</span></p>
+            </div>
+            <div className="project_cards">
+                <Cards />
+
+                <div className="btn-km project_btn">View More Projects</div>
+
+            </div>
+
+        </div>
+        <div className="connect">
+            <div className="skills_info connect_section">
+                <div className="about_q1"><p></p> <p className="q1">Meet and Greet!</p></div>
+
+                <p className="skills_des">Impressed Already? Schedule a call with him.</p>
+                <p className="skills_code">Let’s grab a cup of coffee.</p>
+            </div>
+
+            <div className="connect_icon">
+                <img src={ConnectSvg} />
+            </div>
+
+            <div className="btn-km connect_btn">Let's Connect</div>
+        </div>
+
     </div>
 }
 

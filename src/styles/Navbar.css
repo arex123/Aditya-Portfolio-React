@@ -8,7 +8,7 @@
     position: fixed;
     display: flex;
     transition: all .2s;
-    
+    z-index: 1000;
   }
   
   .Ad_title{
@@ -47,6 +47,7 @@
     text-decoration: none;
     margin-right: 22px;
     font-size: 18px;
+    font-weight: 600;
     font-family: 'Spectral', serif;
     font-family: 'Poppins', sans-serif;
     height: 100%;

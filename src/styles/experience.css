@@ -1,0 +1,15 @@
+.experience_page{
+    margin-top: 250px;
+   /* height: 500px; */
+   /* display: flex; */
+   /* justify-content: center; */
+   /* align-items: center; */
+   color: white;
+}
+.exp_sec{
+    margin-top: 100px;
+    color: black;
+}
+.timeline{
+    width: 50%;
+}
