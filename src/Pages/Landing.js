@@ -20,6 +20,11 @@ import LShapeSvg from '../assets/vectors/l-vector.svg'
 import SpinSvg from '../assets/vectors/circle-spin.svg'
 import BoxedSvg from '../assets/vectors/boxes.svg'
 import ConnectSvg from '../assets/vectors/contact.svg'
+import Rocketsvg from '../assets/rocket.svg'
+import guyImg from '../assets/guy.png'
+
+import P1 from '../assets/card_pic.webp'
+import P2 from '../assets/vectors/project2_pic.webp'
 const Landing = () => {
 
     let links = ["https://www.linkedin.com/in/adityaprofile1/", "https://github.com/arex123"]
@@ -28,9 +33,18 @@ const Landing = () => {
         window.open(links[idx])
     }
 
+    let default_project_list = [P1, P2, P2, P1]
+
 
 
     return <div className="home">
+        <div className="elipse_cont">
+            <img className="guyimg" src={guyImg} alt="guy" />
+            <Elipse className="elipse_svg" />
+        </div>
+        <div className="cylinder_svg">
+            <img src={CylinderSvg} />
+        </div>
         <div className="screen_1">
             <div className="about">
                 <div className="about_q1"><p></p> <p className="q1">Who am i?</p></div>
@@ -51,9 +65,6 @@ const Landing = () => {
                     <div className="btn-res">Download Resume</div>
                 </div>
             </div>
-            <div className="about_right">
-                <Elipse className="about_right_svg" />
-            </div>
             {/* <div className="dragon_cont">
                     <Canvas>
                         <ambientLight/>
@@ -66,19 +77,19 @@ const Landing = () => {
         </div>
 
         <div className="screen_2">
+            <div className="l_shape_svg">
+                <img src={LShapeSvg} />
+            </div>
+
             <div className="skills_info">
                 <div className="about_q1"><p></p> <p className="q1">What i Know?</p></div>
 
                 <p className="skills_des">He creates elegant, logical web and mobile app solutions. In his hobby time, he designs.</p>
                 <p className="skills_code">Think.<span> Code.</span> Debug.</p>
-                <div className="l_shape_svg">
-                    <img src={LShapeSvg} />
-                </div>
+
             </div>
             <div className="skills_icons">
-                <div className="cylinder_svg">
-                    <img src={CylinderSvg} />
-                </div>
+
 
                 <div className="skills_icons_cont">
                     <div>  <img className="skill_svgs svg_node" src={NodeSvg} /></div>
@@ -97,6 +108,10 @@ const Landing = () => {
 
 
         <div className="experice_section1">
+
+            <img className="spinsvg" src={SpinSvg} />
+            <img className="boxessvg" src={BoxedSvg} />
+            <img className="rocketsvg" src={Rocketsvg} />
             <div className="skills_info connect_section">
                 <div className="about_q1"><p></p> <p className="q1">#2 What does he do? </p></div>
 
@@ -104,6 +119,7 @@ const Landing = () => {
                 <p className="skills_code"><span>Software Developer</span></p>
             </div>
 
+            <div className="btn-km exp_btn">View Past Experience</div>
         </div>
 
         <div className="about_project">
@@ -114,7 +130,11 @@ const Landing = () => {
                 <p className="skills_code">Something he has <span> built.</span></p>
             </div>
             <div className="project_cards">
-                <Cards />
+                <div className="project_cards_cont">
+                    {default_project_list.map((item, index) =>
+                        <Cards key={index} pic={item} />
+                    )}
+                </div>
 
                 <div className="btn-km project_btn">View More Projects</div>
 
@@ -122,17 +142,20 @@ const Landing = () => {
 
         </div>
         <div className="connect">
-            <div className="skills_info connect_section">
-                <div className="about_q1"><p></p> <p className="q1">Meet and Greet!</p></div>
+            <div className="connect_des">
 
-                <p className="skills_des">Impressed Already? Schedule a call with him.</p>
-                <p className="skills_code">Let’s grab a cup of coffee.</p>
+                <div className="skills_info connect_section">
+                    <div className="about_q1"><p></p> <p className="q1">Meet and Greet!</p></div>
+
+                    <p className="skills_des">Impressed Already? Schedule a call with him.</p>
+                    <p className="skills_code">Let’s grab a cup of coffee.</p>
+                </div>
+
+                <div className="connect_icon">
+                    <img src={ConnectSvg} />
+                </div>
+
             </div>
-
-            <div className="connect_icon">
-                <img src={ConnectSvg} />
-            </div>
-
             <div className="btn-km connect_btn">Let's Connect</div>
         </div>
 

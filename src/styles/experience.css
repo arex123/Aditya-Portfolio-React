@@ -1,15 +1,151 @@
 .experience_page{
-    margin-top: 250px;
-   /* height: 500px; */
-   /* display: flex; */
-   /* justify-content: center; */
-   /* align-items: center; */
-   color: white;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
+.exp_icons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.exp_icons div{
+    margin-top: 20px;
+    transition: all .25s ease-out;
+}
+.exp_icons div:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    
+}
+.traqPic{
+    height: 80px;
+    width: 170px;
+
+    border-radius: 20px;
+
+}
+.vclPic{
+    height: 45px;
+    width: 170px;
+    
+    border-radius: 10px;
+}
+.pepPic{
+    height: 40px;
+    width: 170px;
+}
+
+.exp_title_icons{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* padding: 150px 0 150px 0; */
+    padding: 10% 0 5% 5%;
+    z-index: 600;
+}
+
 .exp_sec{
-    margin-top: 100px;
+    position: relative;
+    z-index: 600;
+    /* margin-top: 100px; */
     color: black;
+    /* margin-bottom: 180px; */
+    height: 70vh;
+    display: flex;
+    align-items: center;
 }
 .timeline{
     width: 50%;
+}
+
+.div_appear{
+    transform: scale(1) !important;
+}
+.div_dissapear{
+    transform: scale(0) !important;
+}
+
+.timeline_detail{
+    width: 50%;
+    height: 70vh;
+    line-height: 20px;
+    
+}
+
+.timeline_detail div{
+    width: 70%;
+    padding: 5px;
+    padding-left: 25px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.work_at_des{
+    margin-bottom: 15px;
+}
+
+.detail-1,.detail-2,.detail-3{
+    position: absolute !important;
+    top: 150px !important;
+    background: #b8c1ec;
+    transform: scale(0);
+    width: 100% !important;
+    transition: all .25s ease-in;
+}
+
+.c_name{
+    font-size: 25px;
+    font-weight: 600;
+}
+.c_role{
+    font-size: 20px;
+}
+
+.vertical-timeline-element-content {
+    /* display: none; */
+}
+
+
+.vertical-timeline-element--education,.vertical-timeline-element--work {
+    padding: 30px;
+}
+.vertical-timeline-element-icon, .bounce-in{
+    transition: all .25s ease-in-out;
+}
+
+.vertical-timeline-element-icon:hover, .bounce-in:hover{
+    cursor: pointer;
+    
+    transform: scale(1.2) !important;
+
+    /* box-shadow: 1px 1px 5px rgba(255,255,255,1), -1px -1px 5px rgba(255,255,255,1); */
+
+}
+
+
+.bg_cylinder_icon{
+    position: absolute;
+    /* top: -180px; */
+    top: 80px;
+    right: 0;
+    z-index: 500;
+}
+
+
+
+
+@keyframes spinanimation{
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+.bg_spin_icon{
+    background-size: cover;
+    position: absolute;
+    left: -10%;
+    bottom: -15%;
+    animation: spinanimation 5s ease-in infinite;
+    z-index: 500;
 }

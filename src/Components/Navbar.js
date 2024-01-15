@@ -75,6 +75,14 @@ function Navbar() {
                     </div>
                 </a>
                 </Link>
+                <Link to="/"><a style={fontSize} href="#">Explore
+                    <div className="underline_image underline_image_home" style={underline}>
+                       
+                        {/* <Underline /> */}
+                    
+                    </div>
+                </a>
+                </Link>
                 <Link to="/projects"><a style={fontSize} href="#">Projects
                 <div className="underline_image underline_image_project" style={underline}>
                        

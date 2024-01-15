@@ -3,11 +3,13 @@
     font-family: "Arial", sans-serif;
     color: #ffffff;
     overflow: hidden;
+    position: relative;
   }
   .screen_1{
     display: flex;
     width: 100%;
     /* height: 100vh; */
+    margin-top: 5%;
   }
   .about {
     /* height: 100%; */
@@ -79,20 +81,31 @@
     pointer-events: none;
   }
 
-  .about_right{
-    position: relative;
-    width: 100%;
-  }
-  .about_right_svg{
-
+ 
+  .elipse_svg{
     position: absolute;
-    top: 200px;
-    right: 0;
+    top: 10%;
+    right: -20%;
     pointer-events: none;
     width: 70%;
     opacity: .7;
-    
-
+    z-index: 100;
+  }
+  .cylinder_svg{
+    transform: scale(1.2);
+    position: absolute;
+    top: 28%;
+    z-index: 200;
+    /* top: ; */
+    /* right: -20px; */
+    /* top: -190px; */
+    opacity: .5;
+    background: linear-gradient(to right,);
+    animation: cylinder_move_right_animation 4s ease-in infinite;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    pointer-events: none;
   }
   .prompt svg {
     font-size: 60px;
@@ -123,28 +136,6 @@
     font-size: 20px;
   }
   
-  @media only screen and (max-width: 600px) {
-    .about h2 {
-      font-size: 40px;
-    }
-  
-    .about .prompt {
-      margin-top: 10px;
-      font-size: 20px;
-      width: 80%;
-    }
-  
-    .skills {
-      text-align: center;
-    }
-    .list {
-      padding: 0;
-    }
-  
-    .skills h2 {
-      font-size: 30px;
-    }
-  }
 
   .btn-km-res{
     display: flex;
@@ -185,7 +176,8 @@
 
   .screen_2{
     display: flex;
-    margin-top: 300px;
+    margin-top: 350px;
+    position: relative;
     /* height: 70vh; */
   }
 
@@ -199,9 +191,10 @@
   .l_shape_svg{
     position: absolute;
     /* bottom: 150px; */
-    top: 100px;
+    /* top: 100px; */
     /* left: 20px; */
-    right: 0;
+    top: 100px;
+    left: 25%;
     /* right: 50px; */
     opacity: .6;
   }
@@ -230,9 +223,7 @@
     align-items: start;
   }
 
-  .cylinder_svg img{
-    padding: 0;
-  }
+  
 
   @keyframes cylinder_move_right_animation {
     0%,100%{
@@ -242,18 +233,7 @@
       right: -30px;
     }
   }
-  .cylinder_svg{
-    position: absolute;
-    /* right: -20px; */
-    top: -90px;
-    opacity: .5;
-    background: linear-gradient(to right,);
-    animation: cylinder_move_right_animation 4s ease-in infinite;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .15s;
-    pointer-events: none;
-  }
+  
   .skills_icons_cont{
 
    display: flex;
@@ -302,10 +282,25 @@
 
   .project_cards{
     margin-top: 40px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .project_cards_cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project_btn{
+    margin-top: 8%;
   }
 
 
-.project_btn,.connect_btn{
+.project_bt{
   margin-top: 80px;
   position: relative;
   top: 50%;
@@ -314,28 +309,136 @@
 }
 
 .connect{
+  margin-top: 6%;
+}
+.connect_des{
   position: relative;
-  margin-top: 100px;
+  display: flex;
 }
+
 .connect_section{
-  height: 100%;
+
 }
+
 .connect_icon{
-  position: absolute;
+  /* position: absolute;
   top: -100px;
-  left: 600px;
+  left: 50%; */
+  transform: scale(2.5);
+  /* position: relative; */
 }
 .connect_icon img{
   
-  /* transform: scale(1.8); */
+  position: relative;
+  top: 15%;
 }
 
 .connect_btn{
-  margin-top: 180px;
+  margin-top: 2%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 .about_project{
   margin-top: 250px;
 }
 .experice_section1{
-  margin-top: 150px;
+  margin-top: 15%;
+  position: relative;
 }
+
+@keyframes spinanimation{
+  to{
+    transform: rotate(360deg);
+  }
+}
+.spinsvg{
+  position: absolute;
+  top: 0;
+  right: -15%;
+  animation: spinanimation 5s ease-in infinite;
+}
+.boxessvg{
+  position: absolute;
+  top: 0;
+  left: 20%;
+}
+
+.rocketsvg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: .6;
+}
+
+.exp_btn{
+  position: relative;
+  left: 15%;
+  margin-top: 10%;
+  /* transform: translate(-50%,-50%); */
+}
+
+.guyimg{
+  position: absolute;
+  /* opacity: .5; */
+  height: 500px;
+  width: 500px;
+  top: 10%;
+  right: 0;
+}
+
+@media only screen and (min-width:1200px){
+  .elipse_svg{
+    transform: scale(.8);
+    top: 5%;
+    right: -15%;
+  }
+  .cylinder_svg{
+    transform: scale(1);
+    top: 22%;
+  }
+  .guyimg{
+
+  }
+}
+
+@media only screen and (min-width:1500px){
+  .elipse_svg{
+    transform: scale(.8);
+    top: 5%;
+    right: -17%;
+  }
+  .cylinder_svg{
+    transform: scale(1);
+    top: 23%;
+  }
+  .guyimg{
+    /* top: ; */
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .about h2 {
+    font-size: 40px;
+  }
+
+  .about .prompt {
+    margin-top: 10px;
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .skills {
+    text-align: center;
+  }
+  .list {
+    padding: 0;
+  }
+
+  .skills h2 {
+    font-size: 30px;
+  }
+}
+

@@ -18,7 +18,7 @@ function App() {
           <Route path='/projects' element={<Project/>} />
           <Route path='/project/:id' element={<ProjectDetail/>} />
         </Routes>
-          <Footer/>
+          {/* <Footer/> */}
       </BrowserRouter>
 
       
