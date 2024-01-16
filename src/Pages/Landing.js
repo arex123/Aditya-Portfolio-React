@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useRef } from "react";
 import '../styles/Home.css'
 // import { Canvas } from "@react-three/fiber";
 // import { OrbitControls} from "@react-three/drei";
@@ -26,6 +26,7 @@ import guyImg from '../assets/guy.png'
 import P1 from '../assets/card_pic.webp'
 import P2 from '../assets/vectors/project2_pic.webp'
 const Landing = () => {
+    const ref = useRef(null)
 
     let links = ["https://www.linkedin.com/in/adityaprofile1/", "https://github.com/arex123"]
 
@@ -76,7 +77,7 @@ const Landing = () => {
             </div> */}
         </div>
 
-        <div className="screen_2">
+        <div className="screen_2" ref={ref}>
             <div className="l_shape_svg">
                 <img src={LShapeSvg} />
             </div>
