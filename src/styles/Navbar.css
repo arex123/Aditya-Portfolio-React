@@ -134,12 +134,16 @@
     top: 48px;
     left: -5px;
     transition: all .2s;
-    display: none;
+
   }
 
-  .underline_image_home{
+  .showLine{
     display: block;
   }
+  .dontShow{
+    display: none;
+  }
+  
   .underline_image_project{
     left: 2px;
   }

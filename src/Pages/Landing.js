@@ -1,4 +1,4 @@
-import React, { Suspense, useRef } from "react";
+import React, { Suspense, useEffect, useRef } from "react";
 import '../styles/Home.css'
 // import { Canvas } from "@react-three/fiber";
 // import { OrbitControls} from "@react-three/drei";
@@ -20,11 +20,13 @@ import LShapeSvg from '../assets/vectors/l-vector.svg'
 import SpinSvg from '../assets/vectors/circle-spin.svg'
 import BoxedSvg from '../assets/vectors/boxes.svg'
 import ConnectSvg from '../assets/vectors/contact.svg'
-import Rocketsvg from '../assets/rocket.svg'
+import Rocketsvg from '../assets/work.png'
 import guyImg from '../assets/guy.png'
 
 import P1 from '../assets/card_pic.webp'
 import P2 from '../assets/vectors/project2_pic.webp'
+
+
 const Landing = () => {
     const ref = useRef(null)
 
@@ -35,8 +37,6 @@ const Landing = () => {
     }
 
     let default_project_list = [P1, P2, P2, P1]
-
-
 
     return <div className="home">
         <div className="elipse_cont">
@@ -98,9 +98,9 @@ const Landing = () => {
                     <div>  <img className="skill_svgs svg_html" src={HtmlSvg} /></div>
                     <div>  <img className="skill_svgs svg_js" src={JSSvg} /></div>
                     <div>  <img className="skill_svgs svg_exp" src={Exp} /></div>
-                    <div>  <img className="skill_svgs svg_git" src={GitSvg} /></div>
                     <div>  <img className="skill_svgs svg_mong" src={Mong} /></div>
-                    <div>  <img className="skill_svgs svg_fig" src={Fig} /></div>
+                    <div>  <img className="skill_svgs svg_git" src={GitSvg} /></div>
+                    {/* <div>  <img className="skill_svgs svg_fig" src={Fig} /></div> */}
                 </div>
 
 

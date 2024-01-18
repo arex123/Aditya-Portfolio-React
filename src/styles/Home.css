@@ -367,15 +367,17 @@
 
 .rocketsvg{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: .6;
+  top: 10%;
+  right: 0;
+  opacity: .1;
+  height: 700px;
+  width: 800px;
 }
 
 .exp_btn{
   position: relative;
   left: 15%;
-  margin-top: 10%;
+  margin-top: 6%;
   /* transform: translate(-50%,-50%); */
 }
 

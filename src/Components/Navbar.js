@@ -1,15 +1,27 @@
 import { Reorder } from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import '../styles/Navbar.css'
 import {ReactComponent as Underline} from './../assets/Underline.svg'
 
 function Navbar() {
-
+    
     const [expand, setExpand] = useState(false)
     const location = useLocation();
+    const [currUnder,setUnderline] = useState(1);
+
     useEffect(() => {
         setExpand(false);
+        let pos = location.pathname;
+        if(pos.includes("projects")){
+            setUnderline(3)
+        }else if(pos.includes("experience")){
+            setUnderline(4)
+        }else if(pos.includes("resume")){
+            setUnderline(5)
+        }else{
+            setUnderline(1)
+        }
     }, [location])
 
     const [isScroll, setIsScroll] = useState(false);
@@ -47,7 +59,7 @@ function Navbar() {
     }
 
     const titleTopMargin = {
-        marginTop: isScroll ? "-15px" : "0px"
+        // marginTop: isScroll ? "-15px" : "0px"
     }
 
     const underline = {
@@ -57,7 +69,7 @@ function Navbar() {
     return (
         <div className="navbar" style={navcss} id={expand ? "open" : "close"}>
             <div className="Ad_title" style={titleTopMargin}>
-                <span style={logoSize}>AD</span>
+               <Link to="/">  <span style={logoSize}>AD</span></Link>
             </div>
             <div className="toggleButton">
                 <button onClick={() => {
@@ -68,36 +80,35 @@ function Navbar() {
             </div>
             <div className="links" >
                 <Link to="/"><a style={fontSize} href="#">Home
-                    <div className="underline_image underline_image_home" style={underline}>
+                    <div className={`underline_image underline_image_home ${currUnder==1?"showLine":"dontShow"}`} style={underline}>
                        
                         <Underline />
                     
                     </div>
                 </a>
                 </Link>
-                <Link to="/"><a style={fontSize} href="#">Explore
-                    <div className="underline_image underline_image_home" style={underline}>
+                {/* <a style={fontSize} href="#explore">Explore
+                    <div className={`underline_image underline_image_home ${currUnder==1?"showLine":"dontShow"}`} style={underline}>
                        
-                        {/* <Underline /> */}
                     
                     </div>
-                </a>
-                </Link>
+                </a> */}
+                
                 <Link to="/projects"><a style={fontSize} href="#">Projects
-                <div className="underline_image underline_image_project" style={underline}>
+                <div className={`underline_image underline_image_project ${currUnder==3?"showLine":"dontShow"}`} style={underline}>
                        
                         <Underline />
                     
                     </div>
                 </a></Link>
                 <Link to="/experience"><a style={fontSize} href="#">Experience
-                <div className="underline_image underline_image_experience" style={underline}>
+                <div className={`underline_image underline_image_experience ${currUnder==4?"showLine":"dontShow"}`} style={underline}>
                        
                         <Underline />
                     
                     </div></a></Link>
                 <Link to="https://drive.google.com/file/d/1E8s0l2J44NVFXpImNclk2gdugsyCTtqT/view?usp=share_link" target="_blank"><a style={fontSize} href="#">Resume
-                <div className="underline_image underline_image_resume" style={underline}>
+                <div className={`underline_image underline_image_resume ${currUnder==5?"showLine":"dontShow"}`} style={underline}>
                        
                         <Underline />
                     
