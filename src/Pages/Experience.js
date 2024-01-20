@@ -158,7 +158,7 @@ const Experience = () => {
                         <div className={`detail-1 ${val==1?"div_appear":"div_dissapear"}`}>
                             <p className="c_name">Valiant Communication Ltd</p>
                             <p className="c_role">MERN Stack Developer</p>
-                            <p className="c_time">March 2023 - Aug 2023</p>
+                            <p className="c_time">March 2023 - Jul 2023</p>
                             <ul className="work_at_des">
                                 <li>Working on a <b style={{ color: '#986dff' }}>MERN</b> Stack Application,</li>
                                 <li>Created An MERN Application from scrath, Integrated This app with<b style={{ color: '#986dff' }}> Router Device(Digital Device)</b>, for handling/manipulating Router Inbuild Data,</li>

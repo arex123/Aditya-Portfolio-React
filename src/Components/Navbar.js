@@ -107,7 +107,8 @@ function Navbar() {
                         <Underline />
                     
                     </div></a></Link>
-                <Link to="https://drive.google.com/file/d/1E8s0l2J44NVFXpImNclk2gdugsyCTtqT/view?usp=share_link" target="_blank"><a style={fontSize} href="#">Resume
+               
+                <Link to="/resume"><a style={fontSize} href="#">Resume
                 <div className={`underline_image underline_image_resume ${currUnder==5?"showLine":"dontShow"}`} style={underline}>
                        
                         <Underline />

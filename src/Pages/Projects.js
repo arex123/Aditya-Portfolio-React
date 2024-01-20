@@ -28,7 +28,7 @@ const Project = () => {
             </div>
             <div className="tag_btns">
                 <p className={`${currSel=="ALL"?"tagSelected":"unSelected"}`} onClick={()=>handleFilter("ALL")}>ALL</p>
-                <p className={`${currSel=="DESIGN"?"tagSelected":"unSelected"}`} onClick={()=>handleFilter("DESIGN")}>DESIGNS</p>
+                <p className={`${currSel=="DESIGNS"?"tagSelected":"unSelected"}`} onClick={()=>handleFilter("DESIGNS")}>DESIGNS</p>
                 <p className={`${currSel=="WEB"?"tagSelected":"unSelected"}`} onClick={()=>handleFilter("WEB")}>WEB</p>
                 <p className={`${currSel=="OTHER"?"tagSelected":"unSelected"}`} onClick={()=>handleFilter("OTHER")}>NON-WEB</p>
             </div>

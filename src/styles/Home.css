@@ -143,6 +143,7 @@
   }
 
   .btn-km,.btn-res{
+    /* text-decoration: none !important; */
     border: 2px solid  rgba(238,187,195);
     /* padding: 20px 80px; */
     width:14rem;
@@ -157,7 +158,19 @@
     transition: all .15s cubic-bezier(.4,0,.2,1);
   }
 
+  a{
+    text-decoration: none;
+  }
+
+  .exp_btn_tag{
+    color: rgb(35,41,70);
+  }
+  /* .exp_btn_tag:hover{
+    color: pink;
+  } */
+
   .btn-res{
+
     background:rgb(35,41,70);
     color: rgba(238,187,195) ;
   }
@@ -297,6 +310,8 @@
 
   .project_btn{
     margin-top: 8%;
+    position: relative;
+    z-index: 500;
   }
 
 
@@ -378,9 +393,12 @@
   position: relative;
   left: 15%;
   margin-top: 6%;
-  /* transform: translate(-50%,-50%); */
+  display: flex;
+  transition: all .15s cubic-bezier(.4,0,.2,1);
 }
-
+.exp_btn:hover a{
+  color: pink;
+}
 .guyimg{
   position: absolute;
   /* opacity: .5; */

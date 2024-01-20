@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import '../styles/Home.css'
 // import { Canvas } from "@react-three/fiber";
 // import { OrbitControls} from "@react-three/drei";
@@ -25,9 +25,16 @@ import guyImg from '../assets/guy.png'
 
 import P1 from '../assets/card_pic.webp'
 import P2 from '../assets/vectors/project2_pic.webp'
+import { Link } from "react-router-dom";
+import { ProjectList } from "../helpers/ProjectList";
+import ProjectItem from "../Components/ProjectItem";
+import res from '../assets/Aditya_Resume_Jan_2024.pdf'
 
 
 const Landing = () => {
+    const DefaultList = ProjectList.slice(0,4)
+    const [PList, setPList] = useState(DefaultList)
+
     const ref = useRef(null)
 
     let links = ["https://www.linkedin.com/in/adityaprofile1/", "https://github.com/arex123"]
@@ -38,6 +45,23 @@ const Landing = () => {
 
     let default_project_list = [P1, P2, P2, P1]
 
+    const scrollDown = () => {
+        window.scroll({
+            top: ref.current.offsetTop + 1000,
+            behavior: 'smooth'
+        })
+    }
+
+    const handleResume = ()=>{
+        // window.open("https://drive.google.com/file/d/1juA4LmR7ztZ_Ig5iI408GbiA2UTBj2NT/view?usp=drive_link",'_blank')
+        window.open(res,'_blank')
+    }
+
+    const handleEmailClick = () => {
+        window.location.href = 'mailto:aditya.connect0@gmail.com';
+      };
+
+    
     return <div className="home">
         <div className="elipse_cont">
             <img className="guyimg" src={guyImg} alt="guy" />
@@ -62,8 +86,8 @@ const Landing = () => {
 
                 </div>
                 <div className="btn-km-res">
-                    <div className="btn-km">Know More</div>
-                    <div className="btn-res">Download Resume</div>
+                    <div className="btn-km" onClick={scrollDown}>Know More</div>
+                    <div className="btn-res" onClick={handleResume}>Download Resume</div>
                 </div>
             </div>
             {/* <div className="dragon_cont">
@@ -77,12 +101,12 @@ const Landing = () => {
             </div> */}
         </div>
 
-        <div className="screen_2" ref={ref}>
+        <div className="screen_2">
             <div className="l_shape_svg">
                 <img src={LShapeSvg} />
             </div>
 
-            <div className="skills_info">
+            <div className="skills_info" ref={ref}>
                 <div className="about_q1"><p></p> <p className="q1">What i Know?</p></div>
 
                 <p className="skills_des">He creates elegant, logical web and mobile app solutions. In his hobby time, he designs.</p>
@@ -120,7 +144,7 @@ const Landing = () => {
                 <p className="skills_code"><span>Software Developer</span></p>
             </div>
 
-            <div className="btn-km exp_btn">View Past Experience</div>
+            <div className="btn-km exp_btn"><Link to="/experience" className="exp_btn_tag"> View Past Experience</Link></div>
         </div>
 
         <div className="about_project">
@@ -131,13 +155,22 @@ const Landing = () => {
                 <p className="skills_code">Something he has <span> built.</span></p>
             </div>
             <div className="project_cards">
-                <div className="project_cards_cont">
+                {/* <div className="project_cards_cont">
                     {default_project_list.map((item, index) =>
                         <Cards key={index} pic={item} />
                     )}
-                </div>
+                </div> */}
 
-                <div className="btn-km project_btn">View More Projects</div>
+                <div className="projectList">
+                    {
+                        PList.map((project, key) => {
+                            return <ProjectItem key={key} id={key} image={project.pic} />
+                        })
+                    }
+
+
+                </div>
+                <Link to="/projects"><div className="btn-km project_btn">View More Projects</div></Link>
 
             </div>
 
@@ -157,7 +190,7 @@ const Landing = () => {
                 </div>
 
             </div>
-            <div className="btn-km connect_btn">Let's Connect</div>
+            <div className="btn-km connect_btn" onClick={handleEmailClick}>Let's Connect</div>
         </div>
 
     </div>
