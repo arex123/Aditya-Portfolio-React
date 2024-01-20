@@ -92,7 +92,7 @@
   .piimg{
     object-fit: cover;
     vertical-align: top;
-    
+    /* cursor: none; */
   }
 
   .projectItem .bgImage {
@@ -133,6 +133,7 @@
 
   .tilt_card{
     height: 250px !important;
+    /* cursor: grab; */
   }
   
   @media only screen and (min-width:1500px) {

@@ -18,8 +18,8 @@ const ProjectDetail = () => {
                         <p className="p_name">{project.name}</p>
                         <p className="p_desc">{project.desc}</p>
                         <div className="btns_1_2">
-                            <div className="live_link_btn">View Project</div>
-                            <div className="git_repo_btn">View on Github</div>
+                            {project.project_link && <div className="live_link_btn" onClick={()=>window.open(project.project_link)}>View Project</div> }
+                            <div className="git_repo_btn" onClick={()=>window.open(project.github_link)}>View on Github</div>
                         </div>
                     </div>
                 </div>

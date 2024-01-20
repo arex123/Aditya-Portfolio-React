@@ -41,6 +41,7 @@
   height: 100%;
   width: 100%;
   vertical-align: top;
+  cursor: auto;
 }
 .p_name {
   font-size: 60px;

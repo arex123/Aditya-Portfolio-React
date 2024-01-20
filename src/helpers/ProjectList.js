@@ -63,7 +63,7 @@ export const ProjectList = [
         name: "Excel Clone",
         pic: Pro2,
         skills:["JS","HTML","CSS"],
-        project_link:"",
+        project_link:"https://arex123.github.io/excel/",
         github_link:"https://github.com/arex123/excel",
         desc:"Web based Excel Application, features like real ms excel App. Use of Graph algorithms, Browser storage, etc.",
         type:"WEB",
