@@ -164,7 +164,7 @@ const Landing = () => {
                 <div className="projectList">
                     {
                         PList.map((project, key) => {
-                            return <ProjectItem key={key} id={key} image={project.pic} />
+                            return <ProjectItem key={project.key} id={project.key} image={project.pic} />
                         })
                     }
 
