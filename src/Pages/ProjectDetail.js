@@ -7,7 +7,7 @@ import Title from 'react-vanilla-tilt'
 
 const ProjectDetail = () => {
     const { id } = useParams();
-    const project = ProjectList[id]
+    const project = ProjectList.find(p=>p.key==id)
     console.log("proe ",project)
 
     return (

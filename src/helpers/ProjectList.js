@@ -18,6 +18,7 @@ import Pro7 from '../assets/style_p2.png'
 export const ProjectList = [
 
     {
+        key:"00001",
         name:"Watch Playlist",
         pic:Pro5,
         skills:["REACTJS","CSS"],
@@ -28,6 +29,7 @@ export const ProjectList = [
         significance:"The YouTube Web App, crafted with React, enriches user engagement by seamlessly integrating YouTube functionalities. With an intuitive interface, it offers a responsive and immersive platform for users to discover, watch, and interact with diverse video content."
     },
     {
+        key:"00002",
         name: "Instagram Reel Project",
         pic: Pro1,
         skills:["REACTJS","FIREBASE","CSS"],
@@ -39,6 +41,7 @@ export const ProjectList = [
         
     },
     {
+        key:"00003",
         name: "DESKTOP CAPTURE",
         pic: Pro4,
         skills:["Electron JS"],
@@ -50,6 +53,7 @@ export const ProjectList = [
     },
    
     {
+        key:"00004",
         name: "Password Validator library",
         pic: Pro3,
         skills:["JS","HTML","CSS","Virtual DOM"],
@@ -60,6 +64,7 @@ export const ProjectList = [
         significance:"The PSD Validator npm package simplifies PSD file validation, ensuring adherence to industry standards. With seamless integration, developers can easily validate PSD files, enhancing design consistency and reliability in web and graphic projects."
     },
     {
+        key:"00005",
         name: "Excel Clone",
         pic: Pro2,
         skills:["JS","HTML","CSS"],
@@ -70,23 +75,27 @@ export const ProjectList = [
         significance:"The Excel web app facilitates easy online data collaboration and analysis, providing cloud-based access for real-time productivity without local installations."
     },
     {
-        name: "CSS-Project-1 using flexbox",
+        key:"00006",
+        name: "CSS Design Project",
         pic: Pro6,
-        skills:["CSS","SCSS"],
-        project_link:"https://arex123.github.io/flex-project/#",
-        github_link:"https://github.com/arex123/flex-project",
-        desc:"This project utilizes vanilla CSS and employs the SASS pre-processor to build an attractive one-page website using flexbox for enhanced styling and layout.",
-        type:"DESIGNS",
-        significance:"This website showcases the power of vanilla CSS and SASS, utilizing flexbox to create a visually appealing one-page design. The tech stack ensures efficient styling, layout, and maintainability for a seamless user experience."
-    },
-    {
-        name: "CSS Project-2 ",
-        pic: Pro7,
         skills:["CSS","SCSS"],
         project_link:"https://arex123.github.io/advance-css-with-sass/",
         github_link:"https://github.com/arex123/advance-css-with-sass",
         desc:"This project utilizes vanilla CSS and employs the SASS pre-processor to build an attractive one-page website.",
         type:"DESIGNS",
         significance:"This website showcases the power of vanilla CSS and SASS, to create a visually appealing one-page design. The tech stack ensures efficient styling, layout, and maintainability for a seamless user experience."
+        
+    },
+    {
+        key:"00007",
+        name: "CSS Design Project using flexbox",
+        pic: Pro7,
+        skills:["CSS","SCSS"],
+        project_link:"https://arex123.github.io/flex-project/#",
+        github_link:"https://github.com/arex123/flex-project",
+        desc:"This project utilizes vanilla CSS and employs the SASS pre-processor to build an attractive one-page website using flexbox for enhanced styling and layout.",
+        type:"DESIGNS",
+        significance:"This website showcases the power of vanilla CSS and SASS, utilizing flexbox to create a visually appealing one-page design. The tech stack ensures efficient styling, layout, and maintainability for a seamless user experience."
+        
     }
 ]
