@@ -28,7 +28,7 @@ import P2 from '../assets/vectors/project2_pic.webp'
 import { Link } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
 import ProjectItem from "../Components/ProjectItem";
-import res from '../assets/Aditya_Resume_Jan_2024.pdf'
+import res from '../assets/Aditya_Resume_2024.pdf'
 
 
 const Landing = () => {
