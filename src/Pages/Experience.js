@@ -160,10 +160,10 @@ const Experience = () => {
                             <p className="c_role">MERN Stack Developer</p>
                             <p className="c_time">March 2023 - Jul 2023</p>
                             <ul className="work_at_des">
-                                <li>Working on a <b style={{ color: '#986dff' }}>MERN</b> Stack Application,</li>
+                                <li>Worked on a <b style={{ color: '#986dff' }}>MERN</b> Stack Application,</li>
                                 <li>Created An MERN Application from scrath, Integrated This app with<b style={{ color: '#986dff' }}> Router Device(Digital Device)</b>, for handling/manipulating Router Inbuild Data,</li>
                                 <li>Designed <b style={{ color: '#986dff' }}> scalable app</b> in react for creating 200+ forms for handling routers data.</li>
-                                <li><b style={{ color: '#986dff' }}>Design Database structure</b> of Their Router Device</li>
+                                <li><b style={{ color: '#986dff' }}>Designed Database structure</b> of Router Device's Entire Data.</li>
                             </ul>
                         </div>
                         <div className={`detail-2 ${val==2?"div_appear":"div_dissapear"}`}>
