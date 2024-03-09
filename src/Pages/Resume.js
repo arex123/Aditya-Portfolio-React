@@ -1,5 +1,6 @@
 import React from 'react';
 import res from '../assets/Aditya_Resume_2024.pdf'
+import '../styles/Resume.css'
 const Resume = () => {
   return (
     <div className='res-page' style={{
@@ -13,7 +14,7 @@ const Resume = () => {
       justifyContent: "center",
       alignItems: "center"
     }}>
-      <iframe src={res} style={{ border: 'none' }} width="70%" height="900px" />
+      <iframe className='res-iframe' src={res} style={{ border: 'none',width:"70%", minHeight:"100vh" }} />
     </div>
   )
 }

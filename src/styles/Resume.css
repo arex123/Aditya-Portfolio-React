@@ -1,0 +1,25 @@
+@media screen and (max-width:800px) {
+    .res-iframe{
+        min-height: 500px !important;
+    }
+}
+@media screen and (max-width:585px) {
+    
+    .res-iframe{
+        min-height: 400px !important;
+    }
+}
+@media screen and (max-width:485px) {
+    .res-page{
+        padding-top: 100px !important;
+    }
+    .res-iframe{
+        min-height: 350px !important;
+    }
+}
+@media screen and (max-width:400px) {
+    
+    .res-iframe{
+        min-height: 250px !important;
+    }
+}
