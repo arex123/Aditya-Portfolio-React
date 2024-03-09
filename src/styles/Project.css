@@ -14,12 +14,14 @@
   }
 
   .project_section_title{
+    text-align: center;
     color: white;
     font-size: 40px;
     font-weight: 700;
     margin: 0;
   }
   .project_section_title_des{
+    text-align: center;
     color: #fffffe;
     font-weight: 100;
   }
@@ -33,6 +35,7 @@
   .tag_btns{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
   }
   .tag_btns p{
@@ -43,6 +46,7 @@
     width: 100px;
     text-align: center;
     border-radius: 10px;
+    margin-left: 20px;
   }
   .tagSelected{
     color: black !important;
@@ -53,9 +57,9 @@
     color: black;
   } */
 
-  .tag_btns p:not(:first-child){
+  /* .tag_btns p:not(:first-child){
     margin-left: 20px;
-  }
+  } */
   .tag_btns p:hover{
     cursor: pointer;
     box-shadow: 5px 5px 30px pink;
