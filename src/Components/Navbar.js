@@ -11,7 +11,7 @@ function Navbar() {
     const [currUnder, setUnderline] = useState(1);
 
     useEffect(() => {
-        setExpand(!expand);
+        setExpand(false);
         let pos = location.pathname;
         if (pos.includes("projects")) {
             setUnderline(3)
