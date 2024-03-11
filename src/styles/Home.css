@@ -751,19 +751,19 @@ a {
   }
 
 
-  .about_q1{
+  .meet_about_q1{
     display: flex;
     justify-content: center;
 
   }
-  .about_q1 p:first-child {
+  .meet_about_q1 p:first-child {
     height: 1.5px;
     width: 3rem;
     background: #b8c1ec;
     margin-right: 5px;
   
   }
-.about_q1 p:last-child {
+.meet_about_q1 p:last-child {
   height: 1.5px;
   width: 3rem;
   background: #b8c1ec;

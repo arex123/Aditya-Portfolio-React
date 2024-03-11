@@ -109,7 +109,7 @@ const Landing = () => {
             <div className="skills_info" ref={ref}>
                 <div className="about_q1"><p></p> <p className="q1">What i Know?</p></div>
 
-                <p className="skills_des">He creates elegant, logical web and mobile app solutions. In his hobby time, he designs.</p>
+                <p className="skills_des">He crafts refined, coherent web and mobile app solutions. During his leisure hours, he indulges in design pursuits</p>
                 <p className="skills_code">Think.<span> Code.</span> Debug.</p>
 
             </div>
@@ -138,7 +138,7 @@ const Landing = () => {
             <img className="boxessvg" src={BoxedSvg} />
             <img className="rocketsvg" src={Rocketsvg} />
             <div className="skills_info connect_section">
-                <div className="about_q1"><p></p> <p className="q1">#2 What does he do? </p></div>
+                <div className="about_q1"><p></p> <p className="q1">#2 What do I do? </p></div>
 
                 <p className="skills_des">Currently Learning More Tech. Previously worked as a </p>
                 <p className="skills_code"><span>Software Developer</span></p>
@@ -149,9 +149,9 @@ const Landing = () => {
 
         <div className="about_project">
             <div className="skills_info">
-                <div className="about_q1"><p></p> <p className="q1">What i have built?</p></div>
+                <div className="about_q1"><p></p> <p className="q1">What have I built?</p></div>
 
-                <p className="skills_des">Some awesome products for the awesome poeple.</p>
+                <p className="skills_des">Crafts web projects, hones skills, enjoys design.</p>
                 <p className="skills_code">Something he has <span> built.</span></p>
             </div>
             <div className="project_cards">
@@ -179,10 +179,10 @@ const Landing = () => {
             <div className="connect_des">
 
                 <div className="skills_info connect_section">
-                    <div className="about_q1"><p></p> <p className="q1">Meet and Greet!</p><p></p></div>
+                    <div className="about_q1 meet_about_q1"><p></p> <p className="q1">Meet and Greet!</p><p></p></div>
 
-                    <p className="skills_des connect_skills_des">Impressed Already? Schedule a call with him.</p>
-                    <p className="skills_code connect_skills_code">Let’s grab a cup of coffee.</p>
+                    <p className="skills_des connect_skills_des">Thanks for visiting my site.</p>
+                    <p className="skills_code connect_skills_code">Contact Me through Email</p>
                 </div>
 
                 <div className="connect_icon">
