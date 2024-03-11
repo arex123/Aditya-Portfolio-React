@@ -179,10 +179,10 @@ const Landing = () => {
             <div className="connect_des">
 
                 <div className="skills_info connect_section">
-                    <div className="about_q1"><p></p> <p className="q1">Meet and Greet!</p></div>
+                    <div className="about_q1"><p></p> <p className="q1">Meet and Greet!</p><p></p></div>
 
-                    <p className="skills_des">Impressed Already? Schedule a call with him.</p>
-                    <p className="skills_code">Let’s grab a cup of coffee.</p>
+                    <p className="skills_des connect_skills_des">Impressed Already? Schedule a call with him.</p>
+                    <p className="skills_code connect_skills_code">Let’s grab a cup of coffee.</p>
                 </div>
 
                 <div className="connect_icon">
