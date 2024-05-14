@@ -91,7 +91,7 @@ const Experience = () => {
     // </div>)
 
     // const []
-    const [val, setVal] = useState(1);
+    const [val, setVal] = useState(2);
 
     const handleGoDown = () => {
         //    ref.current?.scrollIntoView({behavior:'smooth'});
@@ -112,7 +112,7 @@ const Experience = () => {
                 </div>
                 <div className="exp_icons">
 
-                    <div onClick={() => { setVal(1); handleGoDown(); }}><img className="vclPic" src={VCLPic} /></div>
+                    {/* <div onClick={() => { setVal(1); handleGoDown(); }}><img className="vclPic" src={VCLPic} /></div> */}
                     <div onClick={() => { setVal(2); handleGoDown(); }}><img className="traqPic" src={TraqiqPic} /></div>
                     <div onClick={() => { setVal(3); handleGoDown(); }}><img className="pepPic" src={PepcodingPic} /></div>
 
@@ -123,14 +123,14 @@ const Experience = () => {
                 <div className="timeline">
                     <VerticalTimeline lineColor="#3e497a">
 
-                        <VerticalTimelineElement className="vertical-timeline-element--work"
+                        {/* <VerticalTimelineElement className="vertical-timeline-element--work"
 
                             iconStyle={{ background: val == 1 ? "#eebbc3" : "#3e497a", color: val == 1 ? "black" : "#fff", transform: val == 1 ? "scale(1.2)" : "scale(1)" }}
                             icon={<Work />}
                             iconOnClick={() => { setVal(1) }}
                         >
 
-                        </VerticalTimelineElement>
+                        </VerticalTimelineElement> */}
 
                         <VerticalTimelineElement className="vertical-timeline-element--work"
 
@@ -155,7 +155,7 @@ const Experience = () => {
                 </div>
                 <div className="timeline_detail">
                     <div>
-                        <div className={`detail-1 ${val==1?"div_appear":"div_dissapear"}`}>
+                        {/* <div className={`detail-1 ${val==1?"div_appear":"div_dissapear"}`}>
                             <p className="c_name">Valiant Communication Ltd</p>
                             <p className="c_role">MERN Stack Developer</p>
                             <p className="c_time">March 2023 - Jul 2023</p>
@@ -165,7 +165,7 @@ const Experience = () => {
                                 <li>Designed <b style={{ color: '#986dff' }}> scalable app</b> in react for creating 200+ forms for handling routers data.</li>
                                 <li><b style={{ color: '#986dff' }}>Designed Database structure</b> of Router Device's Entire Data.</li>
                             </ul>
-                        </div>
+                        </div> */}
                         <div className={`detail-2 ${val==2?"div_appear":"div_dissapear"}`}>
                             <p className="c_name">Traqiq Solutions</p>
                             <p className="c_role">Software Developer</p>
