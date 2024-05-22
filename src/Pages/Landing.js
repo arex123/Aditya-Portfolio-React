@@ -21,7 +21,7 @@ import SpinSvg from '../assets/vectors/circle-spin.svg'
 import BoxedSvg from '../assets/vectors/boxes.svg'
 import ConnectSvg from '../assets/vectors/contact.svg'
 import Rocketsvg from '../assets/work.png'
-import guyImg from '../assets/guy.png'
+import guyImg from '../assets/bob.png'
 
 import P1 from '../assets/card_pic.webp'
 import P2 from '../assets/vectors/project2_pic.webp'
