@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
-  background: rgb(35, 41, 70)
+  background: rgb(35, 41, 70);
 }
 
 
@@ -24,4 +24,25 @@ svg {
 
 .workrole li {
   margin-top: 5px;
+}
+
+::-webkit-scrollbar{
+  height: 4px;
+  width: 4px;
+  background: rgb(35, 41, 70);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(61, 76, 164); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgb(35, 41, 70); 
 }

@@ -4,8 +4,6 @@ import ProjectItem from "../Components/ProjectItem";
 import { ProjectList } from "../helpers/ProjectList";
 import Cards from "../Components/Cards";
 
-import P1 from '../assets/card_pic.webp'
-import P2 from '../assets/vectors/project2_pic.webp'
 
 const Project = () => {
 

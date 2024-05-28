@@ -1,9 +1,5 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import '../styles/Home.css'
-// import { Canvas } from "@react-three/fiber";
-// import { OrbitControls} from "@react-three/drei";
-// import Dragon from '../assets/Dragon'
-import Earth from '../Earth'
 import { ReactComponent as Traingle } from '../assets/vectors/triangle.svg'
 import { ReactComponent as Elipse } from '../assets/vectors/ellipse.svg'
 import Exp from '../assets/skills/express.svg'
@@ -14,7 +10,6 @@ import HtmlSvg from '../assets/skills/html.svg'
 import ReactSvg from '../assets/skills/react.svg'
 import NodeSvg from '../assets/skills/node.svg'
 import JSSvg from '../assets/skills/js.svg'
-import Cards from "../Components/Cards";
 import CylinderSvg from '../assets/vectors/cylinder.svg'
 import LShapeSvg from '../assets/vectors/l-vector.svg'
 import SpinSvg from '../assets/vectors/circle-spin.svg'
@@ -23,8 +18,6 @@ import ConnectSvg from '../assets/vectors/contact.svg'
 import Rocketsvg from '../assets/work.png'
 import guyImg from '../assets/bob.png'
 
-import P1 from '../assets/card_pic.webp'
-import P2 from '../assets/vectors/project2_pic.webp'
 import { Link } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
 import ProjectItem from "../Components/ProjectItem";
@@ -42,8 +35,6 @@ const Landing = () => {
     function openLink(idx) {
         window.open(links[idx])
     }
-
-    let default_project_list = [P1, P2, P2, P1]
 
     const scrollDown = () => {
         window.scroll({
@@ -80,9 +71,7 @@ const Landing = () => {
                 </h2>
                 <div className="prompt">
                     <p>A software developer with a passion for learning and creating Softwares.</p>
-                    {/* <LinkedIn style={{ "&:hover": { color: "green"} }} onClick={()=>openLink(0)}/>
-                    <GitHub style={{ "&:hover": { color: "green"} }} onClick={()=>openLink(1)}/> */}
-                    {/* <Email onClick={openLink(2)}/> */}
+                    
 
                 </div>
                 <div className="btn-km-res">
@@ -90,15 +79,7 @@ const Landing = () => {
                     <div className="btn-res" onClick={handleResume}>Download Resume</div>
                 </div>
             </div>
-            {/* <div className="dragon_cont">
-                    <Canvas>
-                        <ambientLight/>
-                        <OrbitControls/>
-                        <Suspense fallback={null}>
-                             <Earth/> 
-                        </Suspense>
-                    </Canvas>
-            </div> */}
+           
         </div>
 
         <div className="screen_2">
