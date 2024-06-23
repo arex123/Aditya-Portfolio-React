@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Title from "react-vanilla-tilt";
-
+import '../styles/experience.css'
 const ProjectItem = (props) => {
   const navigate = useNavigate();
   return (

@@ -140,11 +140,18 @@
   @media only screen and (max-width: 800px) {
     .projectList {
       width: 100%;
+      flex-direction: column;
+      align-items: center;
     }
     .projectItem {
       width: 300px;
       height: 300px;
     }
+    .titl {
+      width: 70% !important;
+      border-radius: 8px !important;
+    }
+    
   }
 
   .tilt_card{
@@ -156,6 +163,10 @@
     
     .tilt_card {
       height: 345px !important;
+      }
+
+      .titl {
+        height: 500px !important;
       }
     
   }
