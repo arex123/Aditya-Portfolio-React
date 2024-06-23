@@ -1,15 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Title from 'react-vanilla-tilt'
+import Title from "react-vanilla-tilt";
 
 const ProjectItem = (props) => {
-    const navigate = useNavigate()
-    return (
-        <div className="projectItem">
-            <Title className="titl tilt_card"><div className='project_card project_card1' ><img className="piimg" src={props.image} onClick={() => {
-                navigate('/project/' + props.id)
-            }} /></div></Title>
+  const navigate = useNavigate();
+  return (
+    // <div className="projectItem">
+      <Title className="titl tilt_card">
+        <div className="project_card project_card1">
+          <img
+            className="piimg"
+            src={props.image}
+            onClick={() => {
+              navigate("/project/" + props.id);
+            }}
+          />
         </div>
-    )
-}
-export default ProjectItem
+      </Title>
+    // </div>
+  );
+};
+export default ProjectItem;

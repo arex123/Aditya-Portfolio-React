@@ -4,23 +4,27 @@
 }
 .titl{
     cursor: pointer;
-    width: 35% !important;
     border-radius: 20px !important;
     padding: 0 !important;
     overflow: hidden;
-    width: 85% !important;
-    height: 100% !important;
+    width: 35% !important;
+    /* height: 100% !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .titl:hover {
     box-shadow: rgba(255, 255, 255, 0.5) 0px 7px 42px !important;
     opacity: .9;
 }
 .project_card{
-    object-fit: fill !important;
+    /* object-fit: fill !important; */
+    
 }
 .project_card img{
     height: 100%;
     width: 100%;
+    /* background-size: contain; */
 }
 
 
