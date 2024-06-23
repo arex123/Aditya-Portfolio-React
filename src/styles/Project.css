@@ -170,3 +170,17 @@
       }
     
   }
+
+
+
+@media screen and (max-width:450px) {
+
+  .about_project{
+    padding: 10px;
+  }
+  .titl {
+      width: 80% !important;
+      border-radius: 5px !important;
+    }
+
+}
