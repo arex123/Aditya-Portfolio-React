@@ -11,7 +11,6 @@ import Contact from './Pages/Contact';
 function App() {
   return (
     <div className="App">
-
       <BrowserRouter>
       <Navbar/>
         <Routes>
@@ -22,7 +21,7 @@ function App() {
           <Route path='/contact-me' element={<Contact/>} />
           <Route path='/project/:id' element={<ProjectDetail/>} />
         </Routes>
-          {/* <Footer/> */}
+          <Footer/>
       </BrowserRouter>
 
       
