@@ -23,8 +23,24 @@ import { ProjectList } from "../helpers/ProjectList";
 import ProjectItem from "../Components/ProjectItem";
 import res from '../assets/Aditya_Resume_2024.pdf'
 
+import { db } from "../firebase";
+import { doc, updateDoc, increment } from "firebase/firestore";
 
 const Landing = () => {
+
+    useEffect(() => {
+        console.log("aa32",db)
+        const incrementVisitCount = async () => {
+        console.log("aa34")
+          const docRef = doc(db, "visits", "counter");
+          await updateDoc(docRef, {
+            count: increment(1)
+          });
+          console.log("aa39")
+        };
+    
+        incrementVisitCount();
+      }, []);
     const DefaultList = ProjectList.slice(0,4)
     const [PList, setPList] = useState(DefaultList)
 
