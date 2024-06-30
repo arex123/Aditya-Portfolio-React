@@ -22,24 +22,49 @@ import { Link } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
 import ProjectItem from "../Components/ProjectItem";
 import res from '../assets/Aditya_Resume_2024.pdf'
-
-// import { db } from "../firebase";
-import { doc, updateDoc, increment } from "firebase/firestore";
+import app from "../firebase";
+import {getDatabase,ref as rr,set,push} from 'firebase/database'
 
 const Landing = () => {
 
+    const saveData = (data)=>{
+        const screen_resolution = JSON.stringify(window.screen.availHeight+ " h&&w "+window.screen.availWidth)
+        const db = getDatabase(app)
+        const newRef = push(rr(db,"details/"+data))
+        set(newRef,{
+            visits:data,
+            screen:screen_resolution
+        }).then(()=>{
+            // console.log("success")
+        }).catch((error)=>{
+            // console.log("failed")
+        })
+    }
+
     useEffect(() => {
-        // console.log("aa32",db)
-        // const incrementVisitCount = async () => {
-        // console.log("aa34")
-        //   const docRef = doc(db, "visits", "counter");
-        //   await updateDoc(docRef, {
-        //     count: increment(1)
-        //   });
-        //   console.log("aa39")
-        // };
-    
-        // incrementVisitCount();
+
+        let portVD = localStorage.getItem('portVistData')
+        if(portVD){
+            // console.log("present: ",portVD)
+            const now = new Date(); 
+            const formattedDate = now.toLocaleDateString();
+            const hour = now.getHours();
+            let fhpv = JSON.stringify(formattedDate+"&"+hour)
+            if(portVD!==fhpv){
+                localStorage.removeItem('portVistData');
+                localStorage.setItem('portVistData',fhpv);
+                saveData(fhpv)
+            }
+            // console.log("gg ",formattedDate+"&"+hour)
+        }else{
+            const now = new Date(); 
+            const formattedDate = now.toLocaleDateString();
+            const hour = now.getHours();
+            let fhpv = JSON.stringify(formattedDate+"&"+hour)
+            // console.log("gg ",formattedDate+"&"+hour)
+            localStorage.setItem('portVistData',fhpv);
+            saveData(fhpv)
+        }
       }, []);
     const DefaultList = ProjectList.slice(0,4)
     const [PList, setPList] = useState(DefaultList)
