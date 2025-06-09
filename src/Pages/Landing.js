@@ -21,7 +21,7 @@ import guyImg from '../assets/bob.png'
 import { Link } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
 import ProjectItem from "../Components/ProjectItem";
-import res from '../assets/Aditya_Resume_2024.pdf'
+import res from '../assets/Aditya_resume.pdf'
 import app from "../firebase";
 import {getDatabase,ref as rr,set,push} from 'firebase/database'
 

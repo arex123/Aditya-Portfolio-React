@@ -8,6 +8,7 @@ import CircleSvg from '../assets/vectors/circle-spin.svg'
 import PepcodingPic from '../assets/pepcoding.png'
 import TraqiqPic from '../assets/traqiq.png'
 import VCLPic from '../assets/vcl.jpeg'
+import HeloPic from '../assets/helo.png'
 // import UdemySVG from '../assets/udemy.svg'
 const Experience = () => {
     const ref = useRef()
@@ -112,7 +113,8 @@ const Experience = () => {
                 </div>
                 <div className="exp_icons">
 
-                    {/* <div onClick={() => { setVal(1); handleGoDown(); }}><img className="vclPic" src={VCLPic} /></div> */}
+                    <div onClick={() => { setVal(0); handleGoDown(); }}><img className="vclPic" src={HeloPic} /></div>
+                    <div onClick={() => { setVal(1); handleGoDown(); }}><img className="vclPic" src={VCLPic} /></div>
                     <div onClick={() => { setVal(2); handleGoDown(); }}><img className="traqPic" src={TraqiqPic} /></div>
                     <div onClick={() => { setVal(3); handleGoDown(); }}><img className="pepPic" src={PepcodingPic} /></div>
 
@@ -123,14 +125,23 @@ const Experience = () => {
                 <div className="timeline">
                     <VerticalTimeline lineColor="#3e497a">
 
-                        {/* <VerticalTimelineElement className="vertical-timeline-element--work"
+                        <VerticalTimelineElement className="vertical-timeline-element--work"
+
+                            iconStyle={{ background: val == 0 ? "#eebbc3" : "#3e497a", color: val == 0 ? "black" : "#fff", transform: val == 0 ? "scale(1.2)" : "scale(1)" }}
+                            icon={<Work />}
+                            iconOnClick={() => { setVal(0) }}
+                        >
+
+                        </VerticalTimelineElement>
+
+                        <VerticalTimelineElement className="vertical-timeline-element--work"
 
                             iconStyle={{ background: val == 1 ? "#eebbc3" : "#3e497a", color: val == 1 ? "black" : "#fff", transform: val == 1 ? "scale(1.2)" : "scale(1)" }}
                             icon={<Work />}
                             iconOnClick={() => { setVal(1) }}
                         >
 
-                        </VerticalTimelineElement> */}
+                        </VerticalTimelineElement>
 
                         <VerticalTimelineElement className="vertical-timeline-element--work"
 
@@ -155,7 +166,18 @@ const Experience = () => {
                 </div>
                 <div className="timeline_detail">
                     <div>
-                        {/* <div className={`detail-1 ${val==1?"div_appear":"div_dissapear"}`}>
+                        <div className={`detail-1 ${val==0?"div_appear":"div_dissapear"}`}>
+                            <p className="c_name">Helo.ai by Vivaconnect</p>
+                            <p className="c_role">Jr. Software Engineer</p>
+                            <p className="c_time">Nov 2024 - present</p>
+                            <ul className="work_at_des">
+                                <li>Contributing to both React and Angular projects as a Junior Software Engineer at my current company.</li>
+                                <li>Worked extensively on a React-based internal support application used for managing bulk messaging campaigns (RCS, SMS, WhatsApp) for banks and businesses.</li>
+                                <li>Focused on improving performance and extending core functionalities; optimized the app to increase its Lighthouse performance score from 48 to 92, enhancing load speed and responsiveness.</li>
+                                {/* <li><b style={{ color: '#986dff' }}>Designed Database structure</b> of Router Device's Entire Data.</li> */}
+                            </ul>
+                        </div>
+                        <div className={`detail-1 ${val==1?"div_appear":"div_dissapear"}`}>
                             <p className="c_name">Valiant Communication Ltd</p>
                             <p className="c_role">MERN Stack Developer</p>
                             <p className="c_time">March 2023 - Jul 2023</p>
@@ -165,7 +187,7 @@ const Experience = () => {
                                 <li>Designed <b style={{ color: '#986dff' }}> scalable app</b> in react for creating 200+ forms for handling routers data.</li>
                                 <li><b style={{ color: '#986dff' }}>Designed Database structure</b> of Router Device's Entire Data.</li>
                             </ul>
-                        </div> */}
+                        </div>
                         <div className={`detail-2 ${val==2?"div_appear":"div_dissapear"}`}>
                             <p className="c_name">Traqiq Solutions</p>
                             <p className="c_role">Software Developer</p>
