@@ -6,7 +6,7 @@ const Cards = (props) => {
 
   return (
     <div className='cards_cont'>
-      <Title className="titl"><div className='project_card'><img src={props.pic}/></div></Title>
+      <Title className="titl"><div className='project_card'><img src={props.pic} alt="Project"/></div></Title>
     </div>
   )
 }

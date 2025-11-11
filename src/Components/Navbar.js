@@ -47,8 +47,6 @@ function Navbar() {
         boxShadow: isScroll ? "0 1px 50px rgba(0,0,0,.4)" : ""
     }
 
-    const shadow = {
-    }
 
     const logoSize = {
         // transform:isScroll?"scale(.7)":"scale(1)"
@@ -89,22 +87,10 @@ function Navbar() {
                 </div>
 
                 <div className="sideBarLinks">
-                    <Link to="/"><a href="#">Home
-
-                    </a>
-                    </Link>
-
-
-                    <Link to="/projects"><a href="#">Projects
-
-                    </a></Link>
-                    <Link to="/experience"><a href="#">Experience
-                    </a></Link>
-
-                    <Link to="/resume"><a href="#">Resume
-
-                    </a></Link>
-
+                    <Link to="/">Home</Link>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/experience">Experience</Link>
+                    <Link to="/resume">Resume</Link>
                 </div>
 
 
@@ -112,13 +98,12 @@ function Navbar() {
             </div>
             </div>
             <div className="links" >
-                <Link to="/"><a style={fontSize} href="#">Home
-                    <div className={`underline_image underline_image_home ${currUnder == 1 ? "showLine" : "dontShow"}`} style={underline}>
+                <Link to="/" style={fontSize}>Home
+                    <div className={`underline_image underline_image_home ${currUnder === 1 ? "showLine" : "dontShow"}`} style={underline}>
 
                         <Underline />
 
                     </div>
-                </a>
                 </Link>
                 {/* <a style={fontSize} href="#explore">Explore
                     <div className={`underline_image underline_image_home ${currUnder==1?"showLine":"dontShow"}`} style={underline}>
@@ -127,27 +112,27 @@ function Navbar() {
                     </div>
                 </a> */}
 
-                <Link to="/projects"><a style={fontSize} href="#">Projects
-                    <div className={`underline_image underline_image_project ${currUnder == 3 ? "showLine" : "dontShow"}`} style={underline}>
+                <Link to="/projects" style={fontSize}>Projects
+                    <div className={`underline_image underline_image_project ${currUnder === 3 ? "showLine" : "dontShow"}`} style={underline}>
 
                         <Underline />
 
                     </div>
-                </a></Link>
-                <Link to="/experience"><a style={fontSize} href="#">Experience
-                    <div className={`underline_image underline_image_experience ${currUnder == 4 ? "showLine" : "dontShow"}`} style={underline}>
+                </Link>
+                <Link to="/experience" style={fontSize}>Experience
+                    <div className={`underline_image underline_image_experience ${currUnder === 4 ? "showLine" : "dontShow"}`} style={underline}>
 
                         <Underline />
 
-                    </div></a></Link>
+                    </div></Link>
 
-                <Link to="/resume"><a style={fontSize} href="#">Resume
-                    <div className={`underline_image underline_image_resume ${currUnder == 5 ? "showLine" : "dontShow"}`} style={underline}>
+                <Link to="/resume" style={fontSize}>Resume
+                    <div className={`underline_image underline_image_resume ${currUnder === 5 ? "showLine" : "dontShow"}`} style={underline}>
 
                         <Underline />
 
                     </div>
-                </a></Link>
+                </Link>
             </div>
         </div>
     )

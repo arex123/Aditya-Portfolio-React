@@ -103,8 +103,8 @@ const Experience = () => {
     }
     return (
         <div className="experience_page">
-            <img className="bg_cylinder_icon" src={CylinderSvg} />
-            <img className="bg_spin_icon" src={CircleSvg} />
+            <img className="bg_cylinder_icon" src={CylinderSvg} alt="Background decoration" />
+            <img className="bg_spin_icon" src={CircleSvg} alt="Background decoration" />
             <div className="exp_title_icons">
                 <div className="skills_info skills_info_exp">
                     <div className="about_q1"><p></p> <p className="q1">About My Past Experience!</p></div>
@@ -113,10 +113,10 @@ const Experience = () => {
                 </div>
                 <div className="exp_icons">
 
-                    <div onClick={() => { setVal(0); handleGoDown(); }}><img className="vclPic" src={HeloPic} /></div>
-                    <div onClick={() => { setVal(1); handleGoDown(); }}><img className="vclPic" src={VCLPic} /></div>
-                    <div onClick={() => { setVal(2); handleGoDown(); }}><img className="traqPic" src={TraqiqPic} /></div>
-                    <div onClick={() => { setVal(3); handleGoDown(); }}><img className="pepPic" src={PepcodingPic} /></div>
+                    <div onClick={() => { setVal(0); handleGoDown(); }}><img className="vclPic" src={HeloPic} alt="Helo.ai" /></div>
+                    <div onClick={() => { setVal(1); handleGoDown(); }}><img className="vclPic" src={VCLPic} alt="Valiant Communication" /></div>
+                    <div onClick={() => { setVal(2); handleGoDown(); }}><img className="traqPic" src={TraqiqPic} alt="Traqiq Solutions" /></div>
+                    <div onClick={() => { setVal(3); handleGoDown(); }}><img className="pepPic" src={PepcodingPic} alt="Pepcoding" /></div>
 
                 </div>
             </div>
@@ -127,7 +127,7 @@ const Experience = () => {
 
                         <VerticalTimelineElement className="vertical-timeline-element--work"
 
-                            iconStyle={{ background: val == 0 ? "#eebbc3" : "#3e497a", color: val == 0 ? "black" : "#fff", transform: val == 0 ? "scale(1.2)" : "scale(1)" }}
+                            iconStyle={{ background: val === 0 ? "#eebbc3" : "#3e497a", color: val === 0 ? "black" : "#fff", transform: val === 0 ? "scale(1.2)" : "scale(1)" }}
                             icon={<Work />}
                             iconOnClick={() => { setVal(0) }}
                         >
@@ -136,7 +136,7 @@ const Experience = () => {
 
                         <VerticalTimelineElement className="vertical-timeline-element--work"
 
-                            iconStyle={{ background: val == 1 ? "#eebbc3" : "#3e497a", color: val == 1 ? "black" : "#fff", transform: val == 1 ? "scale(1.2)" : "scale(1)" }}
+                            iconStyle={{ background: val === 1 ? "#eebbc3" : "#3e497a", color: val === 1 ? "black" : "#fff", transform: val === 1 ? "scale(1.2)" : "scale(1)" }}
                             icon={<Work />}
                             iconOnClick={() => { setVal(1) }}
                         >
@@ -145,7 +145,7 @@ const Experience = () => {
 
                         <VerticalTimelineElement className="vertical-timeline-element--work"
 
-                            iconStyle={{ background: val == 2 ? "#eebbc3" : "#3e497a", color: val == 2 ? "black" : "#fff", transform: val == 2 ? "scale(1.2)" : "scale(1)" }}
+                            iconStyle={{ background: val === 2 ? "#eebbc3" : "#3e497a", color: val === 2 ? "black" : "#fff", transform: val === 2 ? "scale(1.2)" : "scale(1)" }}
                             icon={<Work />}
                             iconOnClick={() => { setVal(2) }}
                         >
@@ -155,7 +155,7 @@ const Experience = () => {
 
                         <VerticalTimelineElement className="vertical-timeline-element--education"
 
-                            iconStyle={{ background: val == 3 ? "#eebbc3" : "#3e497a", color: val == 3 ? "black" : "#fff", transform: val == 3 ? "scale(1.2)" : "scale(1)" }}
+                            iconStyle={{ background: val === 3 ? "#eebbc3" : "#3e497a", color: val === 3 ? "black" : "#fff", transform: val === 3 ? "scale(1.2)" : "scale(1)" }}
                             icon={<School />}
                             iconOnClick={() => { setVal(3) }}
                         >
@@ -166,18 +166,23 @@ const Experience = () => {
                 </div>
                 <div className="timeline_detail">
                     <div>
-                        <div className={`detail-1 ${val==0?"div_appear":"div_dissapear"}`}>
+                        <div className={`detail-1 ${val===0?"div_appear":"div_dissapear"}`}>
                             <p className="c_name">Helo.ai by Vivaconnect</p>
                             <p className="c_role">Jr. Software Engineer</p>
                             <p className="c_time">Nov 2024 - present</p>
                             <ul className="work_at_des">
-                                <li>Contributing to both React and Angular projects as a Junior Software Engineer at my current company.</li>
-                                <li>Worked extensively on a React-based internal support application used for managing bulk messaging campaigns (RCS, SMS, WhatsApp) for banks and businesses.</li>
-                                <li>Focused on improving performance and extending core functionalities; optimized the app to increase its Lighthouse performance score from 48 to 92, enhancing load speed and responsiveness.</li>
+                                <li>Contributed significantly to the company’s first live product – ”Clarity”, a Customer Data Platform (CDP) built from
+                                scratch in Next.js, designed for scalable, high-segment data handling and fast client-side rendering.</li>
+                                <li>Migrated a large-scale customer support portal from Angular to ReactJS, improving performance and reducing load
+                                times by 30%.</li>
+                                <li>Developed REST APIs using Node.js and Express, integrating backend services with the frontend and improving data
+                                throughput by 25%.</li>
+                                <li>Worked on a complete module in Angular for the Campaign Template System, enabling dynamic campaign creation and
+                                improving marketing team productivity.</li>
                                 {/* <li><b style={{ color: '#986dff' }}>Designed Database structure</b> of Router Device's Entire Data.</li> */}
                             </ul>
                         </div>
-                        <div className={`detail-1 ${val==1?"div_appear":"div_dissapear"}`}>
+                        <div className={`detail-1 ${val===1?"div_appear":"div_dissapear"}`}>
                             <p className="c_name">Valiant Communication Ltd</p>
                             <p className="c_role">MERN Stack Developer</p>
                             <p className="c_time">March 2023 - Jul 2023</p>
@@ -188,7 +193,7 @@ const Experience = () => {
                                 <li><b style={{ color: '#986dff' }}>Designed Database structure</b> of Router Device's Entire Data.</li>
                             </ul>
                         </div>
-                        <div className={`detail-2 ${val==2?"div_appear":"div_dissapear"}`}>
+                        <div className={`detail-2 ${val===2?"div_appear":"div_dissapear"}`}>
                             <p className="c_name">Traqiq Solutions</p>
                             <p className="c_role">Software Developer</p>
                             <p className="c_time">May 2022 - March 2023</p>
@@ -200,7 +205,7 @@ const Experience = () => {
                                 <li>In starting month learned java, <b style={{ color: '#986dff' }}>spring boot</b> and modified some <b style={{ color: '#986dff' }}>api</b>, which were based on spring boot for <b style={{ color: '#986dff' }}>Bike-Rental-App</b></li>
                             </ul>
                         </div>
-                        <div className={`detail-3 ${val==3?"div_appear":"div_dissapear"}`}>
+                        <div className={`detail-3 ${val===3?"div_appear":"div_dissapear"}`}>
                             <p className="c_name">Pepcoding Pvt Ltd</p>
                             <p className="c_role">MERN + DSA TRAINING</p>
                             <p className="c_time">Jun 2021 - Dec 2021</p>

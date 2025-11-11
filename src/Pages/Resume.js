@@ -14,7 +14,7 @@ const Resume = () => {
       justifyContent: "center",
       alignItems: "center"
     }}>
-      <iframe className='res-iframe' src={res} style={{ border: 'none',width:"70%", minHeight:"100vh" }} />
+      <iframe className='res-iframe' src={res} title="Resume" style={{ border: 'none',width:"70%", minHeight:"100vh" }} />
     </div>
   )
 }

@@ -1,10 +1,9 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import '../styles/Home.css'
 import { ReactComponent as Traingle } from '../assets/vectors/triangle.svg'
 import { ReactComponent as Elipse } from '../assets/vectors/ellipse.svg'
 import Exp from '../assets/skills/express.svg'
 import Mong from '../assets/skills/mongodb.svg'
-import Fig from '../assets/skills/figma.svg'
 import GitSvg from '../assets/skills/git.svg'
 import HtmlSvg from '../assets/skills/html.svg'
 import ReactSvg from '../assets/skills/react.svg'
@@ -67,15 +66,9 @@ const Landing = () => {
         }
       }, []);
     const DefaultList = ProjectList.slice(0,4)
-    const [PList, setPList] = useState(DefaultList)
+    const [PList] = useState(DefaultList)
 
     const ref = useRef(null)
-
-    let links = ["https://www.linkedin.com/in/adityaprofile1/", "https://github.com/arex123"]
-
-    function openLink(idx) {
-        window.open(links[idx])
-    }
 
     const scrollDown = () => {
         window.scroll({
@@ -100,7 +93,7 @@ const Landing = () => {
             <Elipse className="elipse_svg" />
         </div>
         <div className="cylinder_svg">
-            <img src={CylinderSvg} />
+            <img src={CylinderSvg} alt="Background decoration" />
         </div>
         <div className="screen_1">
             <div className="about">
@@ -125,7 +118,7 @@ const Landing = () => {
 
         <div className="screen_2">
             <div className="l_shape_svg">
-                <img src={LShapeSvg} />
+                <img src={LShapeSvg} alt="Background decoration" />
             </div>
 
             <div className="skills_info" ref={ref}>
@@ -139,14 +132,13 @@ const Landing = () => {
 
 
                 <div className="skills_icons_cont">
-                    <div>  <img className="skill_svgs svg_node" src={NodeSvg} /></div>
-                    <div>  <img className="skill_svgs svg_react" src={ReactSvg} /></div>
-                    <div>  <img className="skill_svgs svg_html" src={HtmlSvg} /></div>
-                    <div>  <img className="skill_svgs svg_js" src={JSSvg} /></div>
-                    <div>  <img className="skill_svgs svg_exp" src={Exp} /></div>
-                    <div>  <img className="skill_svgs svg_mong" src={Mong} /></div>
-                    <div>  <img className="skill_svgs svg_git" src={GitSvg} /></div>
-                    {/* <div>  <img className="skill_svgs svg_fig" src={Fig} /></div> */}
+                    <div>  <img className="skill_svgs svg_node" src={NodeSvg} alt="Node.js" /></div>
+                    <div>  <img className="skill_svgs svg_react" src={ReactSvg} alt="React" /></div>
+                    <div>  <img className="skill_svgs svg_html" src={HtmlSvg} alt="HTML" /></div>
+                    <div>  <img className="skill_svgs svg_js" src={JSSvg} alt="JavaScript" /></div>
+                    <div>  <img className="skill_svgs svg_exp" src={Exp} alt="Express" /></div>
+                    <div>  <img className="skill_svgs svg_mong" src={Mong} alt="MongoDB" /></div>
+                    <div>  <img className="skill_svgs svg_git" src={GitSvg} alt="Git" /></div>
                 </div>
 
 
@@ -156,9 +148,9 @@ const Landing = () => {
 
         <div className="experice_section1">
 
-            <img className="spinsvg" src={SpinSvg} />
-            <img className="boxessvg" src={BoxedSvg} />
-            <img className="rocketsvg" src={Rocketsvg} />
+            <img className="spinsvg" src={SpinSvg} alt="Background decoration" />
+            <img className="boxessvg" src={BoxedSvg} alt="Background decoration" />
+            <img className="rocketsvg" src={Rocketsvg} alt="Rocket icon" />
             <div className="skills_info connect_section">
                 <div className="about_q1"><p></p> <p className="q1">#2 What do I do? </p></div>
 
@@ -208,7 +200,7 @@ const Landing = () => {
                 </div>
 
                 <div className="connect_icon">
-                    <img src={ConnectSvg} />
+                    <img src={ConnectSvg} alt="Contact" />
                 </div>
 
             </div>

@@ -11,6 +11,7 @@ const ProjectItem = (props) => {
           <img
             className="piimg"
             src={props.image}
+            alt="Project"
             onClick={() => {
               navigate("/project/" + props.id);
             }}

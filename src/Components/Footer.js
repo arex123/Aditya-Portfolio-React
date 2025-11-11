@@ -1,4 +1,4 @@
-import { Instagram, LinkedIn } from "@mui/icons-material";
+import { LinkedIn } from "@mui/icons-material";
 import React from "react";
 import '../styles/Footer.css';
 

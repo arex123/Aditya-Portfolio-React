@@ -1,4 +1,3 @@
-import { GitHub } from "@mui/icons-material";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
@@ -7,7 +6,7 @@ import Title from 'react-vanilla-tilt'
 
 const ProjectDetail = () => {
     const { id } = useParams();
-    const project = ProjectList.find(p=>p.key==id)
+    const project = ProjectList.find(p=>p.key===id)
     console.log("proe ",project)
 
     return (
@@ -25,7 +24,7 @@ const ProjectDetail = () => {
                 </div>
                 <div className="project_img">
                     <Title className="titl titl_tag">
-                        <img className="p_d_img" src={project.pic} />
+                        <img className="p_d_img" src={project.pic} alt={project.name} />
                     </Title>
                 </div>
             </div>
