@@ -17,8 +17,6 @@ import ConnectSvg from '../assets/vectors/contact.svg'
 import Rocketsvg from '../assets/work.png'
 import guyImg from '../assets/bob.png'
 
-//hi
-
 import { Link } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
 import ProjectItem from "../Components/ProjectItem";
