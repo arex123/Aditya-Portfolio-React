@@ -20,9 +20,11 @@ import guyImg from '../assets/bob.png'
 import { Link } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
 import ProjectItem from "../Components/ProjectItem";
-import res from '../assets/Aditya_resume.pdf'
 import app from "../firebase";
 import {getDatabase,ref as rr,set,push} from 'firebase/database'
+
+// Google Drive file ID for Aditya_resume.pdf
+const DRIVE_FILE_ID = '17U6wCD9PSc8dMmEVfpQlCEVRwpwHcA-v';
 
 const Landing = () => {
 
@@ -77,9 +79,8 @@ const Landing = () => {
         })
     }
 
-    const handleResume = ()=>{
-        // window.open("https://drive.google.com/file/d/1juA4LmR7ztZ_Ig5iI408GbiA2UTBj2NT/view?usp=drive_link",'_blank')
-        window.open(res,'_blank')
+    const handleResume = () => {
+        window.open(`https://drive.google.com/file/d/${DRIVE_FILE_ID}/view`, '_blank');
     }
 
     const handleEmailClick = () => {
